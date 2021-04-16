@@ -1,0 +1,15 @@
+﻿<Window x:Class="LogWindow.ResearcherWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LogWindow"
+        mc:Ignorable="d"
+        Title="Лаборант-исследователь" Height="370.732" Width="354.878" Background="#FF76E383" FontFamily="Comic Sans MS">
+    <Grid>
+        <Label x:Name="nameUser" Content="" HorizontalAlignment="Left" Margin="173,23,0,0" VerticalAlignment="Top" Width="134" Background="White"/>
+        <Label x:Name="surnameUser" Content="" HorizontalAlignment="Left" Margin="173,64,0,0" VerticalAlignment="Top" Width="134" Background="White"/>
+        <Label x:Name="workPost" Content="Лаборант-исследователь" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" Margin="156,109,0,0" Width="163" Background="White"/>
+        <Button x:Name="analyze" Content="Анализировать" HorizontalAlignment="Left" VerticalAlignment="Top" Width="327" Margin="10,216,0,0" Height="35"/>
+    </Grid>
+</Window>
