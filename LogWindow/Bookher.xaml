@@ -1,0 +1,17 @@
+﻿<Window x:Name="bookhWindow" x:Class="LogWindow.Bookher"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LogWindow"
+        mc:Ignorable="d"
+        Title="Bookher" Height="370.732" Width="354.878" Background="#FF76E383" FontFamily="Comic Sans MS" Closing="bookhWindow_Closing">
+    <Grid>
+        <Image HorizontalAlignment="Left" Height="106" VerticalAlignment="Top" Width="104" Margin="32,9,0,0" Opacity="0.99" />
+        <Label x:Name="nameUser1" Content="" HorizontalAlignment="Left" Margin="173,23,0,0" VerticalAlignment="Top" Width="134" Background="White"/>
+        <Label x:Name="surnameUser1" Content="" HorizontalAlignment="Left" Margin="173,64,0,0" VerticalAlignment="Top" Width="134" Background="White"/>
+        <Label x:Name="workPos1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,117,0,0" Width="157" Background="White"/>
+        <Button x:Name="report1" Content="Сформировать счет" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Margin="186,213,0,0" Height="46"/>
+        <Button x:Name="bioMats1" Content="Просмотреть отчеты" HorizontalAlignment="Left" VerticalAlignment="Top" Width="145" Margin="15,213,0,0" Height="46"/>
+    </Grid>
+</Window>

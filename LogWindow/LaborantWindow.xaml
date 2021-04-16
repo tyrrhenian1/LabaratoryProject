@@ -5,12 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LogWindow"
         mc:Ignorable="d"
-        Title="Лаборант" Height="326.47" Width="354.878" Background="#FF76E383" FontFamily="Comic Sans MS">
+        Title="Лаборант" Height="326.47" Width="354.878" Background="#FF76E383" FontFamily="Comic Sans MS" Closing="Window_Closing">
     <Grid>
         <Image HorizontalAlignment="Left" Height="106" VerticalAlignment="Top" Width="104" Margin="32,9,0,0" Opacity="0.99" />
         <Label x:Name="nameUser" Content="" HorizontalAlignment="Left" Margin="173,23,0,0" VerticalAlignment="Top" Width="134" Background="White"/>
-        <Label x:Name="surnameUser" Content="" HorizontalAlignment="Left" Margin="173,64,0,0" VerticalAlignment="Top" Width="134" Background="White"/>
-        <Label x:Name="workPost" Content="Лаборант" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" Margin="186,110,0,0" Width="97" Background="White"/>
+        <Label x:Name="workPost" Content="Лаборант" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" Margin="191,63,0,0" Width="97" Background="White"/>
         <Button x:Name="reportUs" Content="Сформировать отчет" HorizontalAlignment="Left" VerticalAlignment="Top" Width="327" Margin="10,241,0,0" Height="35"/>
         <Button x:Name="bioMats" Content="Принять биоматериал" HorizontalAlignment="Left" VerticalAlignment="Top" Width="327" Margin="10,201,0,0" Height="35"/>
     </Grid>

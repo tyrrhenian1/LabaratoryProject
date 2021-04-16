@@ -5,11 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LogWindow"
         mc:Ignorable="d"
-        Title="Администратор" Height="370.732" Width="354.878" Background="#FF76E383" FontFamily="Comic Sans MS">
+        Title="Администратор" Height="370.732" Width="354.878" Background="#FF76E383" FontFamily="Comic Sans MS" Closing="Window_Closing">
     <Grid>
         <Label x:Name="nameUser" Content="" HorizontalAlignment="Left" Margin="173,23,0,0" VerticalAlignment="Top" Width="134" Background="White"/>
-        <Label x:Name="surnameUser" Content="" HorizontalAlignment="Left" Margin="173,64,0,0" VerticalAlignment="Top" Width="134" Background="White"/>
-        <Label x:Name="workPost" Content="Администратор" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="188,110,0,0" Width="104" Background="White"/>
+        <Label x:Name="workPost" Content="Администратор" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="188,55,0,0" Width="104" Background="White"/>
         <Button x:Name="useData" Content="Работа с данными" HorizontalAlignment="Left" VerticalAlignment="Top" Width="327" Margin="10,205,0,0" Height="35"/>
         <Button x:Name="makeReport" Content="Сформировать отчеты" HorizontalAlignment="Left" VerticalAlignment="Top" Width="327" Margin="10,245,0,0" Height="35"/>
         <Button x:Name="logHistory" Content="История входов" HorizontalAlignment="Left" VerticalAlignment="Top" Width="327" Margin="10,285,0,0" Height="35" Click="logHistory_Click"/>

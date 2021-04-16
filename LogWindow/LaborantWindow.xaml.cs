@@ -22,9 +22,9 @@ namespace LogWindow
         public LaborantWindow(int id)
         {
             InitializeComponent();
-            using (Model1 db = new Model1())
+            using (Model2 db = new Model2())
             {
-                var a = from b in db.Users
+                var a = from b in db.users_
                         where b.id.Equals(id)
                         select b;
                 if (a.Count() != 0)
@@ -35,6 +35,12 @@ namespace LogWindow
                     }
                 }
             }
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
         }
     }
 }

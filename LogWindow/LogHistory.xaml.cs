@@ -22,47 +22,41 @@ namespace LogWindow
         public LogHistory()
         {
             InitializeComponent();
-            allLogins.Visibility = Visibility.Hidden;
-            dateFilter.Visibility = Visibility.Hidden;
-            using (Model1 db = new Model1())
-            {
-                var a = from b in db.Users
-                        select new
-                        {
-                            Login = b.login,
-                            LastEnter = b.lastenter,
-                            Ip = b.ip
-                        };
-                logHistory.ItemsSource = a.ToList();
-                foreach(var i in a)
-                {
-                    allLogins.Items.Add(i.Login);
-                }
-            }
+            HideFilter(filter.SelectedIndex);
+            Update();
             
         }
 
         private void filter_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (filter.SelectedIndex == 0)
-            {
-                allLogins.Visibility = Visibility.Visible;
-                dateFilter.Visibility = Visibility.Hidden;
-            }
-            else
-            {
-                dateFilter.Visibility = Visibility.Visible;
-                allLogins.Visibility = Visibility.Hidden;
-            }
+            HideFilter(filter.SelectedIndex);
+            Update();
+            //if (filter.SelectedIndex == 0)
+            //{
+            //    Update();
+            //    HideFilter();
+            //}
+            //else if (filter.SelectedIndex == 1)
+            //{
+            //    allLogins.Visibility = Visibility.Visible;
+            //    dateFilter.Visibility = Visibility.Hidden;
+            //    Update();
+            //}
+            //else
+            //{
+            //    dateFilter.Visibility = Visibility.Visible;
+            //    allLogins.Visibility = Visibility.Hidden;
+            //    Update();
+            //}
         }
 
         private void allLogins_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            using (Model1 db = new Model1())
+            using (Model2 db = new Model2())
             {
                 logHistory.ItemsSource = null;
                 string f = allLogins.SelectedValue.ToString();
-                var query = from b in db.Users
+                var query = from b in db.users_
                             where b.login.Equals(f)
                             select new
                             {
@@ -76,7 +70,7 @@ namespace LogWindow
 
         private void dateFilter_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
-            using (Model1 db = new Model1())
+            using (Model2 db = new Model2())
             {
                 logHistory.ItemsSource = null;
                 DateTime dates = dateFilter.SelectedDate.Value;
@@ -84,7 +78,7 @@ namespace LogWindow
                 int month = dates.Date.Month;
                 int year = dates.Date.Year;
                 string data = $"{day}/{month}/{year}";
-                var query = from b in db.Users
+                var query = from b in db.users_
                             where b.lastenter.Equals(data)
                             select new
                             {
@@ -93,6 +87,42 @@ namespace LogWindow
                                 Ip = b.ip
                             };
                 logHistory.ItemsSource = query.ToList();            
+            }
+        }
+        public void Update()
+        {
+            using (Model2 db = new Model2())
+            {
+                var a = from b in db.users_
+                        select new
+                        {
+                            Login = b.login,
+                            LastEnter = b.lastenter,
+                            Ip = b.ip
+                        };
+                logHistory.ItemsSource = a.ToList();
+                foreach (var i in a)
+                {
+                    allLogins.Items.Add(i.Login);
+                }
+            }
+        }
+        public void HideFilter(int? i)
+        {
+            if (i == 0 || i == null)
+            {
+                allLogins.Visibility = Visibility.Hidden;
+                dateFilter.Visibility = Visibility.Hidden;
+            }
+            else if (i == 1)
+            {
+                allLogins.Visibility = Visibility.Visible;
+                dateFilter.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                allLogins.Visibility = Visibility.Hidden;
+                dateFilter.Visibility = Visibility.Visible;
             }
         }
     }

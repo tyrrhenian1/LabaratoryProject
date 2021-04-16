@@ -22,9 +22,9 @@ namespace LogWindow
         public AdminWindow(int id)
         {
             InitializeComponent();
-            using (Model1 db = new Model1())
+            using (Model2 db = new Model2())
             {
-                var a = from b in db.Users
+                var a = from b in db.users_
                         where b.id.Equals(id)
                         select b;
                 if (a.Count() != 0)
@@ -41,6 +41,12 @@ namespace LogWindow
         {
             LogHistory logHistory = new LogHistory();
             logHistory.Show();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
         }
     }
 }

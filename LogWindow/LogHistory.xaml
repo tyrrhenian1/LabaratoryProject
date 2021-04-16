@@ -9,11 +9,12 @@
     <Grid>
         <DataGrid x:Name="logHistory" HorizontalAlignment="Left" Height="394" VerticalAlignment="Top" Width="420" Margin="0,15,0,0" AutoGenerateColumns="True"/>
         <ComboBox x:Name="filter" HorizontalAlignment="Left" VerticalAlignment="Top" Width="236" Margin="483,66,0,0" Height="24" SelectionChanged="filter_SelectionChanged">
+            <TextBlock>Нет</TextBlock>
             <TextBlock>Логин</TextBlock>
             <TextBlock>Дата</TextBlock>
             </ComboBox>
-            <ComboBox x:Name="allLogins" HorizontalAlignment="Left" VerticalAlignment="Top" Width="236" Margin="483,140,0,0" Height="24" SelectionChanged="allLogins_SelectionChanged"/>
-            <DatePicker x:Name="dateFilter" HorizontalAlignment="Left" Margin="483,223,0,0" VerticalAlignment="Top" Width="236" SelectedDateChanged="dateFilter_SelectedDateChanged"/>
+            <ComboBox x:Name="allLogins" HorizontalAlignment="Left" VerticalAlignment="Top" Width="236" Margin="483,111,0,0" Height="24" SelectionChanged="allLogins_SelectionChanged"/>
+            <DatePicker x:Name="dateFilter" HorizontalAlignment="Left" Margin="483,110,0,0" VerticalAlignment="Top" Width="236" SelectedDateChanged="dateFilter_SelectedDateChanged"/>
 
     </Grid>
 </Window>
