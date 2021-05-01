@@ -68,6 +68,9 @@
     <Compile Include="AdminWindow.xaml.cs">
       <DependentUpon>AdminWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Captcha.xaml.cs">
+      <DependentUpon>Captcha.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Models1\blood_.cs" />
     <Compile Include="Models1\blood_services_.cs" />
     <Compile Include="BookherWindow.xaml.cs">
@@ -81,6 +84,11 @@
     </Compile>
     <Compile Include="Models1\Model2.cs" />
     <Compile Include="Models1\patients_.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="ResearcherWindow.xaml.cs">
       <DependentUpon>ResearcherWindow.xaml</DependentUpon>
     </Compile>
@@ -91,6 +99,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="BookherWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Captcha.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -122,11 +134,6 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -162,6 +169,8 @@
   <ItemGroup>
     <None Include="Resources\Бухгалтер.jpeg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\loader.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

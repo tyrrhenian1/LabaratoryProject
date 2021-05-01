@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace LogWindow
 {
@@ -20,11 +21,53 @@ namespace LogWindow
     /// </summary>
     public partial class MainWindow : Window
     {
+        DispatcherTimer dispatcherTimer;
+        TimeSpan timeInterval = new TimeSpan();
         public MainWindow()
         {
             InitializeComponent();
             passShow.Visibility = Visibility.Hidden;
         }
+        public MainWindow(string x)
+        {
+            InitializeComponent();
+            okay.IsEnabled = false;
+            dispatcherTimer = new DispatcherTimer();
+            if (x.Equals("captcha"))
+            {
+                dispatcherTimer.Tick += DispatcherTimer_Tick1;
+                dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
+                dispatcherTimer.Start();
+            }
+            else if(x.Equals("laborant"))
+            {
+                dispatcherTimer.Tick += DispatcherTimer_Tick2;
+                dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
+                dispatcherTimer.Start();
+            }
+        }
+
+        private void DispatcherTimer_Tick1(object sender, EventArgs e)
+        {
+            timeInterval += dispatcherTimer.Interval;
+            if(timeInterval.Seconds == 10)
+            {
+                dispatcherTimer.Stop();
+                okay.IsEnabled = true;
+                MessageBox.Show("Вы снова можете начать работу");
+            }
+        }
+        private void DispatcherTimer_Tick2(object sender, EventArgs e)
+        {
+            timeInterval += dispatcherTimer.Interval;
+            if (timeInterval.Seconds == 30)
+            {
+                dispatcherTimer.Stop();
+                okay.IsEnabled = true;
+                MessageBox.Show("Вы снова можете начать работу");
+            }
+        }
+
         private void okay_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -56,29 +99,34 @@ namespace LogWindow
                                 {
                                     LaborantWindow laborant = new LaborantWindow(ister.id);
                                     laborant.Show();
-                                    autorizedWindow.Close();
+                                    Close();
                                 }
                                 else if (ister.type == 2)
                                 {
                                     BookherWindow bookher = new BookherWindow(ister.id);
                                     bookher.Show();
-                                    autorizedWindow.Close();
+                                    Close();
                                 }
                                 else if (ister.type == 3)
                                 {
                                     ResearcherWindow researcher = new ResearcherWindow(ister.id);
                                     researcher.Show();
-                                    autorizedWindow.Close();
+                                    Close();
                                 }
                                 else if (ister.type == 4)
                                 {
                                     AdminWindow admin = new AdminWindow(ister.id);
                                     admin.Show();
-                                    autorizedWindow.Close();
+                                    Close();
                                 }
                             }
                         }
-                        else MessageBox.Show("Неверный логин или пароль");
+                        else
+                        {
+                            Captcha captcha = new Captcha();
+                            Close();
+                            captcha.ShowDialog();
+                        }
                     }
                 }
                 

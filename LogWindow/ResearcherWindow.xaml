@@ -5,10 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LogWindow"
         mc:Ignorable="d"
-        Title="Лаборант-исследователь" Height="307.947" Width="354.878" Background="#FF76E383" FontFamily="Comic Sans MS" Closing="Window_Closing">
+        Title="Лаборант-исследователь" Height="307.947" Width="354.878" Background="#FF76E383" FontFamily="Comic Sans MS">
     <Grid>
         <Label x:Name="nameUser" Content="" HorizontalAlignment="Left" Margin="173,23,0,0" VerticalAlignment="Top" Width="134" Background="White"/>
         <Label x:Name="workPost" Content="Лаборант-исследователь" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" Margin="161,63,0,0" Width="163" Background="White"/>
-        <Button x:Name="analyze" Content="Анализировать" HorizontalAlignment="Left" VerticalAlignment="Top" Width="327" Margin="10,216,0,0" Height="35"/>
+        <Button x:Name="analyze" Content="Анализировать" HorizontalAlignment="Left" VerticalAlignment="Top" Width="327" Margin="10,195,0,0" Height="35"/>
+        <Button x:Name="exit" Content="Выход" HorizontalAlignment="Left" VerticalAlignment="Top" Width="327" Margin="10,235,0,0" Height="35" Foreground="Red" Click="exit_Click"/>
+        <Label x:Name="timerBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="207,107,0,0" Width="130" Height="22"/>
     </Grid>
 </Window>

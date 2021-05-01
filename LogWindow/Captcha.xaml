@@ -1,0 +1,16 @@
+﻿<Window x:Name="captchaWindow" x:Class="LogWindow.Captcha"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LogWindow"
+        mc:Ignorable="d"
+        Title="Captcha" Height="450" Width="320.968">
+    <Grid>
+        <Image x:Name="captchaImage" HorizontalAlignment="Left" Height="196" Margin="0,10,0,0" VerticalAlignment="Top" Width="313"/>
+        <Button x:Name="ok" Content="Button" HorizontalAlignment="Left" Margin="64,297,0,0" VerticalAlignment="Top" Width="151" Height="41" Click="ok_Click"/>
+        <TextBox x:Name="captchaBox" HorizontalAlignment="Left" Height="36" Margin="10,232,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="229"/>
+        <Image x:Name="refreshCapt" HorizontalAlignment="Left" Height="36" Margin="259,232,0,0" VerticalAlignment="Top" Width="41" MouseLeftButtonUp="refreshCapt_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/loader.gif"/>
+
+    </Grid>
+</Window>
