@@ -56,7 +56,7 @@ namespace LogWindow
             {
                 logHistory.ItemsSource = null;
                 string f = allLogins.SelectedValue.ToString();
-                var query = from b in db.users_
+                var query = from b in db.users
                             where b.login.Equals(f)
                             select new
                             {
@@ -78,7 +78,7 @@ namespace LogWindow
                 int month = dates.Date.Month;
                 int year = dates.Date.Year;
                 string data = $"{day}/{month}/{year}";
-                var query = from b in db.users_
+                var query = from b in db.users
                             where b.lastenter.Equals(data)
                             select new
                             {
@@ -93,7 +93,7 @@ namespace LogWindow
         {
             using (Model2 db = new Model2())
             {
-                var a = from b in db.users_
+                var a = from b in db.users
                         select new
                         {
                             Login = b.login,

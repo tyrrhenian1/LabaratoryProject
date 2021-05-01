@@ -7,7 +7,7 @@ namespace LogWindow
     using System.Data.Entity.Spatial;
 
     [Table("users$")]
-    public partial class users_
+    public partial class users
     {
         public int id { get; set; }
 
@@ -29,6 +29,6 @@ namespace LogWindow
         [StringLength(255)]
         public string services { get; set; }
 
-        public int type { get; set; }
+        public int? type { get; set; }
     }
 }

@@ -6,19 +6,16 @@ namespace LogWindow
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Blood")]
-    public partial class Blood
+    [Table("services$")]
+    public partial class services
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int id { get; set; }
-
-        public int patient { get; set; }
-
-        [Required]
-        [StringLength(255)]
-        public string barcode { get; set; }
+        [Key]
+        public int Code { get; set; }
 
         [StringLength(255)]
-        public string date { get; set; }
+        public string Service { get; set; }
+
+        [StringLength(255)]
+        public string Price { get; set; }
     }
 }

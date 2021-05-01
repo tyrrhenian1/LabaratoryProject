@@ -68,6 +68,8 @@
     <Compile Include="AdminWindow.xaml.cs">
       <DependentUpon>AdminWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models1\blood_.cs" />
+    <Compile Include="Models1\blood_services_.cs" />
     <Compile Include="BookherWindow.xaml.cs">
       <DependentUpon>BookherWindow.xaml</DependentUpon>
     </Compile>
@@ -77,24 +79,13 @@
     <Compile Include="LogHistory.xaml.cs">
       <DependentUpon>LogHistory.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model2.cs" />
-    <Compile Include="Models\Admin.cs" />
-    <Compile Include="Models\Blood.cs" />
-    <Compile Include="Models\BloodServices.cs" />
-    <Compile Include="Models\Booker.cs" />
-    <Compile Include="Models\InsureCompany.cs" />
-    <Compile Include="Models\Laborant.cs" />
-    <Compile Include="Models\LSearcher.cs" />
-    <Compile Include="Models\Model1.cs" />
-    <Compile Include="Models\Order.cs" />
-    <Compile Include="Models\Pacients.cs" />
-    <Compile Include="Models\Services.cs" />
-    <Compile Include="Models\sysdiagrams.cs" />
-    <Compile Include="Models\Users.cs" />
+    <Compile Include="Models1\Model2.cs" />
+    <Compile Include="Models1\patients_.cs" />
     <Compile Include="ResearcherWindow.xaml.cs">
       <DependentUpon>ResearcherWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="users_.cs" />
+    <Compile Include="Models1\services_.cs" />
+    <Compile Include="Models1\users_.cs" />
     <Page Include="AdminWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -171,8 +162,6 @@
   <ItemGroup>
     <None Include="Resources\Бухгалтер.jpeg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="TestModels\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

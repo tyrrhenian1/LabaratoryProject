@@ -12,7 +12,11 @@ namespace LogWindow
         {
         }
 
-        public virtual DbSet<users_> users_ { get; set; }
+        public virtual DbSet<blood> blood_{ get; set; }
+        public virtual DbSet<blood_services> blood_services { get; set; }
+        public virtual DbSet<patients> patients { get; set; }
+        public virtual DbSet<users> users { get; set; }
+        public virtual DbSet<services> services { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

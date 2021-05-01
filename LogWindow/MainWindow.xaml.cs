@@ -45,7 +45,7 @@ namespace LogWindow
                 {
                     using (Model2 db = new Model2())
                     {
-                        var a = from b in db.users_
+                        var a = from b in db.users
                                 where b.login.Equals(loginUser.Text) && b.password.Equals(passUser.Password)
                                 select b;
                         if (a.Count() != 0)

@@ -24,7 +24,7 @@ namespace LogWindow
             InitializeComponent();
             using (Model2 db = new Model2())
             {
-                var a = from b in db.users_
+                var a = from b in db.users
                         where b.id.Equals(id)
                         select b;
                 if (a.Count() != 0)

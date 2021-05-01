@@ -6,9 +6,9 @@ namespace LogWindow
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class Pacients
+    [Table("patients$")]
+    public partial class patients
     {
-        [Key]
         [StringLength(255)]
         public string fullname { get; set; }
 
@@ -24,13 +24,15 @@ namespace LogWindow
         [StringLength(255)]
         public string email { get; set; }
 
+        public double? social_sec_number { get; set; }
+
         [StringLength(255)]
-        public string social_sec_number { get; set; }
+        public string ein { get; set; }
 
         [StringLength(255)]
         public string social_type { get; set; }
 
-        [StringLength(30)]
+        [StringLength(255)]
         public string phone { get; set; }
 
         public double? passport_s { get; set; }
@@ -39,12 +41,27 @@ namespace LogWindow
 
         public double? birthdate_timestamp { get; set; }
 
-        public int idPacient { get; set; }
+        public int id { get; set; }
 
         [StringLength(255)]
         public string country { get; set; }
 
         [StringLength(255)]
         public string insurance_name { get; set; }
+
+        [StringLength(255)]
+        public string insurance_address { get; set; }
+
+        public double? insurance_inn { get; set; }
+
+        [StringLength(255)]
+        public string ipadress { get; set; }
+
+        public double? insurance_pc { get; set; }
+
+        public double? insurance_bik { get; set; }
+
+        [StringLength(255)]
+        public string ua { get; set; }
     }
 }
