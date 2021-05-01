@@ -12,5 +12,6 @@
         <Button x:Name="analyze" Content="Анализировать" HorizontalAlignment="Left" VerticalAlignment="Top" Width="327" Margin="10,195,0,0" Height="35"/>
         <Button x:Name="exit" Content="Выход" HorizontalAlignment="Left" VerticalAlignment="Top" Width="327" Margin="10,235,0,0" Height="35" Foreground="Red" Click="exit_Click"/>
         <Label x:Name="timerBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="207,107,0,0" Width="130" Height="22"/>
+        <Image HorizontalAlignment="Left" Height="92" Margin="22,10,0,0" VerticalAlignment="Top" Width="121" Source="Resources/laborant_2.png"/>
     </Grid>
 </Window>

@@ -27,9 +27,7 @@ namespace LogWindow
         public Captcha()
         {
             InitializeComponent();
-            int width = int.Parse(captchaImage.Width.ToString());
-            int height = int.Parse(captchaImage.Height.ToString());
-            captchaImage.Source = BitmapToImage(CreateImage(width, height));
+            RefreshCaptcha();
         }
         private BitmapSource BitmapToImage(Bitmap bitmap)
         {
@@ -90,7 +88,7 @@ namespace LogWindow
 
         private void refreshCapt_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            captchaBox.Text = "123";
+            RefreshCaptcha();
         }
 
         private void ok_Click(object sender, RoutedEventArgs e)
@@ -104,10 +102,14 @@ namespace LogWindow
             }
             else
             {
-                int width = int.Parse(captchaImage.Width.ToString());
-                int height = int.Parse(captchaImage.Height.ToString());
-                captchaImage.Source = BitmapToImage(CreateImage(width, height));
+                RefreshCaptcha();
             }
+        }
+        private void RefreshCaptcha()
+        {
+            int width = int.Parse(captchaImage.Width.ToString());
+            int height = int.Parse(captchaImage.Height.ToString());
+            captchaImage.Source = BitmapToImage(CreateImage(width, height));
         }
     }
 }

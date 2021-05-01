@@ -31,6 +31,7 @@ namespace LogWindow
         public MainWindow(string x)
         {
             InitializeComponent();
+            passShow.Visibility = Visibility.Hidden;
             okay.IsEnabled = false;
             dispatcherTimer = new DispatcherTimer();
             if (x.Equals("captcha"))
@@ -124,8 +125,8 @@ namespace LogWindow
                         else
                         {
                             Captcha captcha = new Captcha();
-                            Close();
                             captcha.ShowDialog();
+                            Close();
                         }
                     }
                 }

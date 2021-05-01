@@ -155,22 +155,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo.png" />
+    <Resource Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\laborant_1.jpeg" />
+    <Resource Include="Resources\laborant_1.jpeg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\laborant_2.png" />
+    <Resource Include="Resources\laborant_2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Администратор.png" />
+    <Resource Include="Resources\Администратор.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Бухгалтер.jpeg" />
+    <Resource Include="Resources\Бухгалтер.jpeg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\loader.gif" />
+    <Resource Include="Resources\loader.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

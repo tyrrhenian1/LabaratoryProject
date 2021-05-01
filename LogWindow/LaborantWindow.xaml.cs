@@ -55,16 +55,17 @@ namespace LogWindow
             else if (timeInterval.Seconds == 20)
             {
                 dispatcherTimer.Stop();
-                Close();
                 MainWindow mainWindow = new MainWindow("laborant");
                 mainWindow.Show();
+                Close();
+                
             }
         }
 
         private void exit_Click(object sender, RoutedEventArgs e)
         {
-            Close();
             dispatcherTimer.Stop();
+            Close();
         }
     }
 }

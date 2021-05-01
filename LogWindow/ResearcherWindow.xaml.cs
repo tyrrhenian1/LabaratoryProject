@@ -55,9 +55,9 @@ namespace LogWindow
             else if (timeInterval.Seconds == 20)
             {
                 dispatcherTimer.Stop();
-                Close();
                 MainWindow mainWindow = new MainWindow("laborant");
                 mainWindow.Show();
+                Close();
             }
         }
 
